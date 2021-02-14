@@ -1,0 +1,290 @@
+/* Main Settings */
+
+body {
+	background-color: #161a1d;
+	font-family: Arial;
+	color: white;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 900px;
+	width: 100%;
+}
+
+/* Camera */
+
+.monitor {
+	width: 450px;
+	height: 270px;
+	margin: 10px 25px 0 25px;
+	border-radius: 10px;
+	border: 1px solid white;
+	text-align: center;
+	line-height: 300px;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.monitor_control {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.monitor img{
+	display: block;
+	height: 100%;
+}
+
+.range--view {
+	margin: auto;
+	width: 500px;
+}
+
+.range--view input {
+	display: block;
+	width: 100%;
+}
+
+.value {
+	text-align: center;
+	margin: 0 0 0 5px;
+}
+
+/* Control */
+
+.control {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+
+.item {
+	width: 300px;
+	margin: auto 0;
+}
+
+/* Манипулятор */
+
+.manipulator {
+	display: flex;
+	flex-direction: column;
+}
+
+.manipulator__item {
+	margin: 5px 15px;
+}
+
+.last {
+	margin-bottom: 0;
+}
+
+.manipulator__item input {
+	width: 100%;
+}
+
+.name {
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+.btn--manip {
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #21c589;
+}
+
+.btn--arrow {
+	fill: white;
+	width: 30px;
+	height: 30px;
+}
+
+.btn--arrow--active {
+	fill: #161a1d;
+	width: 30px;
+	height: 30px;
+}
+
+.btn {
+	margin-top: 3px;
+	display: flex;
+	justify-content: space-around;
+}
+
+/* Гусеницы */
+
+.caterpillars {
+	margin-top: 0;
+}
+
+.load {
+	margin-top: 0;
+}
+
+.caterpillars__item {
+	display: grid;
+	grid-template-areas: 
+			"tow up flash"
+			"left down right";
+	grid-template-rows: 85px 85px;
+	grid-template-columns: 85px 85px 85px;
+	grid-gap: 15px;
+}
+
+#btn--tow {
+	grid-area: tow;
+}
+
+#btn--up {
+	grid-area: up;
+}
+
+#btn--left {
+	grid-area: left;
+}
+
+#btn--down {
+	grid-area: down;
+}
+
+#btn--right {
+	grid-area: right;
+}
+
+#btn--flash {
+	grid-area: flash;
+}
+
+.btn--green, .btn--camera {
+	border-radius: 50%;
+	width: 85px;
+	height: 85px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #21c589;
+}
+
+.btn--yellow {
+	border-radius: 50%;
+	width: 85px;
+	height: 85px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid yellow;
+}
+
+.btn--red {
+	border-radius: 50%;
+	width: 90px;
+	height: 90px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #F30021;
+}
+
+.arrow--passive, .arrow--passive__camera {
+	fill: white;
+	width: 50px;
+	height: 50px;
+}
+
+.caterpillars p {
+	text-align: center;
+	margin: 0 0 10px 0;
+}
+
+.green--active {
+	background-color: #21c589;
+}
+
+.red--active {
+	background-color: #F30021;
+}
+
+.yellow--active {
+	background-color: yellow;
+}
+
+.arrow--active, .arrow--active__camera {
+	fill: #161a1d;
+	width: 50px;
+	height: 50px;
+}
+
+/* Погрузчик */
+
+.load__item {
+	margin-top: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.btn--blue {
+	border-radius: 10px;
+	height: 88px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #5f9cdf;
+	margin: 5px;
+}
+
+.blue--active {
+	background-color: #5f9cdf;
+}
+
+@media (max-width: 615px) {
+	.item {
+		width: 100%;
+	}
+}
+
+@media (max-width: 510px) {
+	.monitor {
+		margin-top: 0;
+		width: 100%;
+	}
+	.range--view {
+		width: 95%;
+	}
+	.caterpillars__item {
+		margin-bottom: 15px;
+	}
+	.flex {
+		display: flex;
+		justify-content: center;
+	}
+	.btn--camera {
+		width: 45px;
+		height: 45px;
+	}
+	.arrow--passive__camera {
+		width: 30px;
+		height: 30px;
+	}
+	.arrow--active__camera {
+		width: 30px;
+		height: 30px;
+	}
+	.monitor {
+		margin: 10px 10px 0 10px;
+	}
+}
